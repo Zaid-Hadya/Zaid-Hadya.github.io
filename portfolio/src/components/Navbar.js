@@ -1,21 +1,22 @@
 import React, { useState } from "react";
+import './Navbar.css';
 
 function Navbar(){
 return (
     <nav className="navbar">
         <div className="navbar-left">
             <a link="/" className="logo">
-            Home
+            zhadya
             </a>
         </div>
-        <div className="navbar-middle">
-            <ul className="nav-links">
-                <a href="/about">ABOUT</a>
-                <a href="/about">EXPERIENCE</a>
-                <a href="/about">SKILLS</a>
-                <a href="/projects">EDUCATION</a>
-                <a href="/projects">PROJECTS</a>
-                <a href="/contact">CONTACT</a>
+        <div className="nav-links">
+            <ul >
+                 <li><a href="/about">ABOUT</a></li>
+                 <li><a href="/experience">EXPERIENCE</a></li>
+                <li><a href="/skills">SKILLS</a></li>
+                <li><a href="/education">EDUCATION</a></li>
+                <li><a href="/projects">PROJECTS</a></li>
+                <li><a href="/contact">CONTACT</a></li>
             </ul>
         </div>
 

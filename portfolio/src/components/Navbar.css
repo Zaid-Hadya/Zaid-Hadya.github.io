@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.navbar { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color:#fff;
+
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: .5rem;
+}
+
+.nav-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+}
+
+.nav-links li:hover {
+    background-color: #555;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Introduction to Databases and SQL — Database Lab on CodeBench."><title>Introduction to Databases and SQL — Database Lab | CodeBench</title>
+<link rel="stylesheet" href="../../assets/css/base.css"><link rel="stylesheet" href="../../assets/css/layout.css"><link rel="stylesheet" href="../../assets/css/components.css"><link rel="stylesheet" href="../../assets/css/course.css"><link rel="stylesheet" href="../../assets/css/database-lab.css">
+<script type="module" src="../../assets/js/main.js"></script><script type="module" src="../../assets/js/auth-ui.js"></script><script type="module" src="../../assets/js/lesson-progress.js"></script></head><body>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="../../index.html" aria-label="CodeBench home"><img class="brand-logo" src="../../assets/images/wolf-logo.png" alt="" width="40" height="40"><span>CodeBench</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Open navigation"><span></span><span></span></button><nav class="main-nav" id="main-navigation" aria-label="Main navigation"><a href="../../index.html#courses">Courses</a><a href="../sql.html">SQL Playground</a><a href="../../auth.html" data-auth-link>Sign in</a></nav></div></header>
+<main class="course-page"><div class="container"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a><span>/</span><a href="../sql.html">Database Lab</a><span>/</span><span aria-current="page">Introduction to Databases and SQL</span></nav>
+<section class="course-heading"><div><p class="eyebrow">DATABASE LAB / LAB 00</p><h1>Introduction to Databases and SQL</h1><p class="course-hero-description">Work through the lesson, study the examples, then mark it complete to track your learning.</p></div><div class="course-meta"><span>Lesson 01 of 06</span><span>Self-paced</span></div></section>
+<div class="course-layout"><aside class="course-sidebar" aria-label="Database Lab navigation"><div class="sidebar-heading"><span class="sidebar-label">DATABASE LAB</span><span class="sidebar-module-count">06 LESSONS</span></div><nav class="course-module-nav" aria-label="Lessons"><a class="module-link is-active" href="lab00.html" aria-current=page><span class="module-number">01</span><span class="module-nav-text"><span class="module-nav-title">Introduction to Databases and SQL</span><span class="module-nav-detail">Open lesson</span></span></a>
+<a class="module-link " href="lab01.html" ><span class="module-number">02</span><span class="module-nav-text"><span class="module-nav-title">SELECT Statements</span><span class="module-nav-detail">Open lesson</span></span></a>
+<a class="module-link " href="lab02.html" ><span class="module-number">03</span><span class="module-nav-text"><span class="module-nav-title">Filtering with WHERE</span><span class="module-nav-detail">Open lesson</span></span></a>
+<a class="module-link " href="lab03.html" ><span class="module-number">04</span><span class="module-nav-text"><span class="module-nav-title">Sorting and Limiting Results</span><span class="module-nav-detail">Open lesson</span></span></a>
+<a class="module-link " href="lab04.html" ><span class="module-number">05</span><span class="module-nav-text"><span class="module-nav-title">Aggregate Functions and GROUP BY</span><span class="module-nav-detail">Open lesson</span></span></a>
+<a class="module-link " href="lab05.html" ><span class="module-number">06</span><span class="module-nav-text"><span class="module-nav-title">Joining Tables</span><span class="module-nav-detail">Open lesson</span></span></a></nav><div class="sidebar-note"><p>Each lesson is a separate HTML file, so you can edit one topic without changing the others.</p></div></aside><div class="course-lessons"><article class="module-content" data-lesson-content="lab00" id="lab-00">
+<div class="lesson-overline">
+<span>MODULE 01</span>
+<span>FOUNDATIONS</span>
+</div>
+<h2>Introduction to Databases and SQL</h2>
+<p>
+              A database stores information in an organized way. In a
+              relational database, information is commonly arranged in
+              tables made up of rows and columns.
+            </p>
+<h3>Think of a student table</h3>
+<p>
+              Each row represents one student. Each column describes an
+              attribute, such as the student's name or major.
+            </p>
+<div class="lesson-table-wrap">
+<table class="lesson-table">
+<thead>
+<tr>
+<th scope="col">student_id</th>
+<th scope="col">name</th>
+<th scope="col">major</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>101</td>
+<td>Amira</td>
+<td>Software Engineering</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Omar</td>
+<td>Computer Science</td>
+</tr>
+<tr>
+<td>103</td>
+<td>Sara</td>
+<td>Software Engineering</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Your first SQL query</h3>
+<p>
+              SQL stands for Structured Query Language. It lets you ask a
+              database questions about the information it stores.
+            </p>
+<pre><code>SELECT name
+FROM students;</code></pre>
+<p>
+              This query asks the database to return the <code>name</code>
+              column from the <code>students</code> table.
+            </p>
+<div class="lesson-callout">
+<strong>Remember</strong>
+<p>
+<code>SELECT</code> specifies what information you want.
+                <code>FROM</code> specifies which table contains it.
+              </p>
+</div>
+<div class="lesson-completion"><button class="sql-check-button" data-complete-lesson="lab00" type="button">Mark lesson complete</button><p class="sql-score-note" data-lesson-status="true" role="status">Your progress will be saved on this device until Supabase is configured.</p></div><nav aria-label="Lesson navigation" class="lesson-pagination"><span class="pagination-placeholder">First lesson</span><a class="next-lesson" href="lab01.html">Next: SELECT Statements →</a></nav>
+</article><p class="sql-privacy-note">Progress is saved locally until you configure Supabase. Once configured, signed-in students can sync completion across devices.</p></div></div>
+</div></main><footer class="site-footer"><div class="container"><p class="copyright">© <span id="current-year"></span> CodeBench</p></div></footer></body></html>

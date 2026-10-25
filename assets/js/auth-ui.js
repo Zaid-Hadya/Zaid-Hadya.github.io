@@ -1,0 +1,3 @@
+import { isSupabaseConfigured } from "./supabase-config.js";
+import { getSupabaseClient } from "./supabase-client.js";
+document.addEventListener("DOMContentLoaded",async()=>{const links=document.querySelectorAll("[data-auth-link]");if(!links.length||!isSupabaseConfigured)return;try{const client=await getSupabaseClient();const {data:{session}}=await client.auth.getSession();links.forEach(link=>{if(session){link.textContent=session.user.email;link.href=link.getAttribute("href")||"auth.html";link.title="Signed-in account; open account page to sign out";} });}catch(e){console.warn("CodeBench auth status unavailable",e);}});

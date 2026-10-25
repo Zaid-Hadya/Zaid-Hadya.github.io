@@ -1,552 +1,143 @@
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta
-    name="description"
-    content="Learn relational databases and SQL through structured lessons, examples, and practical exercises."
-  >
-  <title>Introduction to Databases with SQL — CodeBench</title>
-
-  <link rel="stylesheet" href="../assets/css/base.css">
-  <link rel="stylesheet" href="../assets/css/layout.css">
-  <link rel="stylesheet" href="../assets/css/components.css">
-  <link rel="stylesheet" href="../assets/css/course.css">
-
-  <script type="module" src="../assets/js/main.js"></script>
-  <script type="module" src="../assets/js/course-page.js"></script>
-</head>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Learn relational databases and SQL through structured lessons, examples, and practical exercises." name="description"/>
+<title>Introduction to Databases with SQL — CodeBench</title>
+<link href="../assets/css/base.css" rel="stylesheet"/>
+<link href="../assets/css/layout.css" rel="stylesheet"/>
+<link href="../assets/css/components.css" rel="stylesheet"/>
+<link href="../assets/css/course.css" rel="stylesheet"/>
+<script src="../assets/js/main.js" type="module"></script>
+<script src="../assets/js/course-page.js" type="module"></script>
+<script src="../assets/js/sql-playground.js" type="module"></script>
+<link href="../assets/css/database-lab.css" rel="stylesheet"/><script src="../assets/js/auth-ui.js" type="module"></script><script src="../assets/js/lesson-progress.js" type="module"></script></head>
 <body>
- 
 <header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="../index.html" aria-label="CodeBench home">
-      <img
-        class="brand-logo"
-        src="../assets/images/wolf-logo.png"
-        alt=""
-        width="40"
-        height="40"
-      >
-      <span>CodeBench</span>
-    </a>
-
-    <button
-      class="menu-toggle"
-      type="button"
-      aria-expanded="false"
-      aria-controls="main-navigation"
-      aria-label="Open navigation"
-    >
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
-      <a href="../index.html#courses">Courses</a>
-      <a class="nav-upcoming" href="#roadmaps" aria-label="Roadmaps, coming soon">
+<div class="container header-inner">
+<a aria-label="CodeBench home" class="brand" href="../index.html">
+<img alt="" class="brand-logo" height="40" src="../assets/images/wolf-logo.png" width="40"/>
+<span>CodeBench</span>
+</a>
+<button aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation" class="menu-toggle" type="button">
+<span></span>
+<span></span>
+</button>
+<nav aria-label="Main navigation" class="main-nav" id="main-navigation">
+<a href="../index.html#courses">Courses</a>
+<a aria-label="Roadmaps, coming soon" class="nav-upcoming" href="#roadmaps">
         Roadmaps <span>Coming soon</span>
-      </a>
-      <button
-        class="nav-sign-in"
-        type="button"
-        disabled
-        title="Sign in will be available in a future update"
-      >
-        Sign in
-      </button>
-    </nav>
-  </div>
+</a>
+<a class="nav-sign-in" data-auth-link="true" href="../auth.html">Sign in</a>
+</nav>
+</div>
 </header>
-
-
-  <main class="course-page">
-    <div class="container">
-
-      <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <a href="../index.html">Home</a>
-        <span class="breadcrumb-separator" aria-hidden="true">/</span>
-        <a href="../index.html#courses">Courses</a>
-        <span class="breadcrumb-separator" aria-hidden="true">/</span>
-        <span aria-current="page">Introduction to Databases with SQL</span>
-      </nav>
-
-      <section class="course-heading">
-        <div>
-          <p class="eyebrow">DATABASES / BEGINNER</p>
-          <h1>Introduction to Databases with SQL</h1>
-          <p class="course-hero-description">
+<main class="course-page">
+<div class="container">
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+<a href="../index.html">Home</a>
+<span aria-hidden="true" class="breadcrumb-separator">/</span>
+<a href="../index.html#courses">Courses</a>
+<span aria-hidden="true" class="breadcrumb-separator">/</span>
+<span aria-current="page">Introduction to Databases with SQL</span>
+</nav>
+<section class="course-heading">
+<div>
+<p class="eyebrow">DATABASES / BEGINNER</p>
+<h1>Introduction to Databases with SQL</h1>
+<p class="course-hero-description">
             Learn how relational databases organize information and how to
             retrieve, filter, sort, summarize, and combine data.
           </p>
-        </div>
-
-        <div class="course-meta" aria-label="Course details">
-          <span>06 modules</span>
-          <span>Self-paced</span>
-          <span>Examples included</span>
-        </div>
-      </section>
-
-      <div class="course-layout">
-
-        <aside class="course-sidebar" aria-label="Course navigation">
-          <div class="sidebar-heading">
-            <span class="sidebar-label">ON THIS COURSE</span>
-            <span class="sidebar-module-count">06 LESSONS</span>
-          </div>
-
-          <nav class="course-module-nav" aria-label="Course modules">
-            <a
-              class="module-link is-active"
-              href="#module-1"
-              aria-current="location"
-            >
-              <span class="module-number">01</span>
-              <span class="module-nav-text">
-                <span class="module-nav-title">Databases and SQL</span>
-                <span class="module-nav-detail">Start with the basics</span>
-              </span>
-            </a>
-
-            <a class="module-link" href="#module-2">
-              <span class="module-number">02</span>
-              <span class="module-nav-text">
-                <span class="module-nav-title">SELECT Statements</span>
-                <span class="module-nav-detail">Retrieve data</span>
-              </span>
-            </a>
-
-            <a class="module-link" href="#module-3">
-              <span class="module-number">03</span>
-              <span class="module-nav-text">
-                <span class="module-nav-title">Filtering with WHERE</span>
-                <span class="module-nav-detail">Find specific records</span>
-              </span>
-            </a>
-
-            <a class="module-link" href="#module-4">
-              <span class="module-number">04</span>
-              <span class="module-nav-text">
-                <span class="module-nav-title">Sorting and Limiting</span>
-                <span class="module-nav-detail">Order your results</span>
-              </span>
-            </a>
-
-            <a class="module-link" href="#module-5">
-              <span class="module-number">05</span>
-              <span class="module-nav-text">
-                <span class="module-nav-title">Aggregate Functions</span>
-                <span class="module-nav-detail">Summarize data</span>
-              </span>
-            </a>
-
-            <a class="module-link" href="#module-6">
-              <span class="module-number">06</span>
-              <span class="module-nav-text">
-                <span class="module-nav-title">Joining Tables</span>
-                <span class="module-nav-detail">Connect related data</span>
-              </span>
-            </a>
-          </nav>
-
-          <div class="sidebar-note">
-            <span class="sidebar-note-mark" aria-hidden="true">i</span>
-            <p>
-              Work through the lessons in order, or revisit any topic whenever
-              you need a refresher.
-            </p>
-          </div>
-        </aside>
-
-        <div class="course-lessons">
-
-          <article class="module-content" id="module-1">
-            <div class="lesson-overline">
-              <span>MODULE 01</span>
-              <span>FOUNDATIONS</span>
-            </div>
-
-            <h2>Introduction to Databases and SQL</h2>
-
-            <p>
-              A database stores information in an organized way. In a
-              relational database, information is commonly arranged in
-              tables made up of rows and columns.
-            </p>
-
-            <h3>Think of a student table</h3>
-
-            <p>
-              Each row represents one student. Each column describes an
-              attribute, such as the student's name or major.
-            </p>
-
-            <div class="lesson-table-wrap">
-              <table class="lesson-table">
-                <thead>
-                  <tr>
-                    <th scope="col">student_id</th>
-                    <th scope="col">name</th>
-                    <th scope="col">major</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>101</td>
-                    <td>Amira</td>
-                    <td>Software Engineering</td>
-                  </tr>
-                  <tr>
-                    <td>102</td>
-                    <td>Omar</td>
-                    <td>Computer Science</td>
-                  </tr>
-                  <tr>
-                    <td>103</td>
-                    <td>Sara</td>
-                    <td>Software Engineering</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <h3>Your first SQL query</h3>
-
-            <p>
-              SQL stands for Structured Query Language. It lets you ask a
-              database questions about the information it stores.
-            </p>
-
-            <pre><code>SELECT name
-FROM students;</code></pre>
-
-            <p>
-              This query asks the database to return the <code>name</code>
-              column from the <code>students</code> table.
-            </p>
-
-            <div class="lesson-callout">
-              <strong>Remember</strong>
-              <p>
-                <code>SELECT</code> specifies what information you want.
-                <code>FROM</code> specifies which table contains it.
-              </p>
-            </div>
-
-            <nav class="lesson-pagination" aria-label="Lesson navigation">
-              <span class="pagination-placeholder">First lesson</span>
-              <a href="#module-2" class="next-lesson">
-                Next: SELECT Statements <span aria-hidden="true">→</span>
-              </a>
-            </nav>
-          </article>
-
-          <article class="module-content" id="module-2">
-            <div class="lesson-overline">
-              <span>MODULE 02</span>
-              <span>RETRIEVING DATA</span>
-            </div>
-
-            <h2>SELECT Statements</h2>
-
-            <p>
-              The <code>SELECT</code> statement retrieves data from a table.
-              You can request specific columns or all available columns.
-            </p>
-
-            <h3>Select specific columns</h3>
-
-            <pre><code>SELECT name, major
-FROM students;</code></pre>
-
-            <p>
-              Only the name and major columns are returned.
-            </p>
-
-            <h3>Select every column</h3>
-
-            <pre><code>SELECT *
-FROM students;</code></pre>
-
-            <p>
-              The asterisk (<code>*</code>) requests all columns. For
-              everyday queries, selecting only the columns you need can
-              make your intentions clearer.
-            </p>
-
-            <h3>Rename a result column</h3>
-
-            <pre><code>SELECT name AS student_name
-FROM students;</code></pre>
-
-            <p>
-              The <code>AS</code> keyword gives the output column a more
-              descriptive heading. It does not rename the original column.
-            </p>
-
-            <div class="lesson-callout">
-              <strong>Check your understanding</strong>
-              <p>
-                Which SQL keyword identifies the table you want to retrieve
-                data from?
-              </p>
-            </div>
-
-            <nav class="lesson-pagination" aria-label="Lesson navigation">
-              <a href="#module-1">← Previous lesson</a>
-              <a href="#module-3" class="next-lesson">
-                Next: Filtering <span aria-hidden="true">→</span>
-              </a>
-            </nav>
-          </article>
-
-          <article class="module-content" id="module-3">
-            <div class="lesson-overline">
-              <span>MODULE 03</span>
-              <span>FILTERING DATA</span>
-            </div>
-
-            <h2>Filtering with WHERE</h2>
-
-            <p>
-              A query without a filter can return many rows. Use
-              <code>WHERE</code> to retrieve only records that match
-              a condition.
-            </p>
-
-            <h3>Match a specific value</h3>
-
-            <pre><code>SELECT name, major
-FROM students
-WHERE major = 'Software Engineering';</code></pre>
-
-            <p>
-              Text values are usually enclosed in single quotation marks.
-              This query returns students whose major matches the specified
-              value.
-            </p>
-
-            <h3>Combine conditions</h3>
-
-            <pre><code>SELECT name, major
-FROM students
-WHERE major = 'Software Engineering'
-  AND student_id > 101;</code></pre>
-
-            <p>
-              <code>AND</code> requires both conditions to be true.
-              <code>OR</code> allows either condition to be true, while
-              <code>NOT</code> negates a condition.
-            </p>
-
-            <h3>Useful operators</h3>
-
-            <ul>
-              <li><code>=</code> equal to</li>
-              <li><code>&gt;</code> greater than</li>
-              <li><code>&lt;</code> less than</li>
-              <li><code>&gt;=</code> greater than or equal to</li>
-              <li><code>&lt;&gt;</code> not equal to in standard SQL</li>
-            </ul>
-
-            <div class="lesson-callout">
-              <strong>A common mistake</strong>
-              <p>
-                Use <code>IS NULL</code> to test for missing values, not
-                <code>= NULL</code>.
-              </p>
-            </div>
-
-            <nav class="lesson-pagination" aria-label="Lesson navigation">
-              <a href="#module-2">← Previous lesson</a>
-              <a href="#module-4" class="next-lesson">
-                Next: Sorting <span aria-hidden="true">→</span>
-              </a>
-            </nav>
-          </article>
-
-          <article class="module-content" id="module-4">
-            <div class="lesson-overline">
-              <span>MODULE 04</span>
-              <span>ORDERING RESULTS</span>
-            </div>
-
-            <h2>Sorting and Limiting Results</h2>
-
-            <p>
-              Use <code>ORDER BY</code> to arrange rows by one or more
-              columns. Use <code>LIMIT</code> in SQLite and several other
-              database systems to restrict the number of returned rows.
-            </p>
-
-            <h3>Sort from highest to lowest</h3>
-
-            <pre><code>SELECT name, score
-FROM students
-ORDER BY score DESC
-LIMIT 5;</code></pre>
-
-            <p>
-              <code>DESC</code> sorts in descending order.
-              <code>ASC</code> sorts in ascending order and is the default
-              when no direction is specified.
-            </p>
-
-            <h3>Sort by multiple columns</h3>
-
-            <pre><code>SELECT name, major, score
-FROM students
-ORDER BY major ASC, score DESC;</code></pre>
-
-            <p>
-              This sorts by major first, then by score within each major.
-            </p>
-
-            <div class="lesson-callout">
-              <strong>Database differences</strong>
-              <p>
-                SQLite and MySQL support <code>LIMIT</code>. SQL Server
-                commonly uses <code>TOP</code> or
-                <code>OFFSET ... FETCH</code>, depending on the query.
-              </p>
-            </div>
-
-            <nav class="lesson-pagination" aria-label="Lesson navigation">
-              <a href="#module-3">← Previous lesson</a>
-              <a href="#module-5" class="next-lesson">
-                Next: Aggregate Functions <span aria-hidden="true">→</span>
-              </a>
-            </nav>
-          </article>
-
-          <article class="module-content" id="module-5">
-            <div class="lesson-overline">
-              <span>MODULE 05</span>
-              <span>SUMMARIZING DATA</span>
-            </div>
-
-            <h2>Aggregate Functions and GROUP BY</h2>
-
-            <p>
-              Aggregate functions calculate a summary from multiple rows.
-              They are useful when you want totals, averages, counts, or
-              minimum and maximum values.
-            </p>
-
-            <h3>Count students in each major</h3>
-
-            <pre><code>SELECT major, COUNT(*) AS student_count
-FROM students
-GROUP BY major;</code></pre>
-
-            <h3>Common aggregate functions</h3>
-
-            <ul>
-              <li><code>COUNT()</code> counts rows or non-NULL values.</li>
-              <li><code>SUM()</code> adds numeric values.</li>
-              <li><code>AVG()</code> calculates an average.</li>
-              <li><code>MIN()</code> returns the minimum value.</li>
-              <li><code>MAX()</code> returns the maximum value.</li>
-            </ul>
-
-            <h3>Filter groups with HAVING</h3>
-
-            <pre><code>SELECT major, COUNT(*) AS student_count
-FROM students
-GROUP BY major
-HAVING COUNT(*) > 1;</code></pre>
-
-            <p>
-              <code>GROUP BY</code> creates groups. <code>HAVING</code>
-              filters those groups after aggregation, while
-              <code>WHERE</code> filters individual rows before grouping.
-            </p>
-
-            <nav class="lesson-pagination" aria-label="Lesson navigation">
-              <a href="#module-4">← Previous lesson</a>
-              <a href="#module-6" class="next-lesson">
-                Next: Joining Tables <span aria-hidden="true">→</span>
-              </a>
-            </nav>
-          </article>
-
-          <article class="module-content" id="module-6">
-            <div class="lesson-overline">
-              <span>MODULE 06</span>
-              <span>RELATING DATA</span>
-            </div>
-
-            <h2>Joining Tables</h2>
-
-            <p>
-              Relational databases often store related information in
-              separate tables. A <code>JOIN</code> combines rows from
-              those tables using a related column or condition.
-            </p>
-
-            <h3>Understand the relationship</h3>
-
-            <p>
-              Imagine that the <code>students</code> table stores student
-              details and the <code>enrollments</code> table stores the
-              courses each student takes.
-            </p>
-
-            <p>
-              A primary key identifies a row in its table. A foreign key
-              refers to a related row in another table.
-            </p>
-
-            <h3>Join students to enrollments</h3>
-
-            <pre><code>SELECT students.name, enrollments.course_id
-FROM students
-JOIN enrollments
-  ON students.id = enrollments.student_id;</code></pre>
-
-            <p>
-              The <code>ON</code> condition tells the database how the rows
-              relate. An inner <code>JOIN</code> returns matching rows;
-              a <code>LEFT JOIN</code> also keeps unmatched rows from the
-              left table.
-            </p>
-
-            <div class="lesson-callout">
-              <strong>Course milestone</strong>
-              <p>
-                You've reached the end of the introductory SQL lessons.
-                Next, the course can grow with a sample database, an
-                interactive query editor, guided exercises, and automatic
-                feedback on query results.
-              </p>
-            </div>
-
-            <nav class="lesson-pagination" aria-label="Lesson navigation">
-              <a href="#module-5">← Previous lesson</a>
-              <a href="../index.html#courses" class="next-lesson">
-                Explore other courses <span aria-hidden="true">→</span>
-              </a>
-            </nav>
-          </article>
-
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <a class="brand footer-brand" href="../index.html">
-        <span class="brand-mark" aria-hidden="true">&gt;_</span>
-        <span>CodeBench</span>
-      </a>
-      <p>Built for practice. Improved through feedback.</p>
-      <p class="copyright">© <span id="current-year"></span> CodeBench</p>
-    </div>
-  </footer>
+</div>
+<div aria-label="Course details" class="course-meta">
+<span>06 modules</span>
+<span>Self-paced</span>
+<span>Examples included</span>
+</div>
+</section>
+<section aria-labelledby="sql-lab-title" class="sql-lab" data-sql-playground="">
+<div class="sql-lab-heading">
+<div>
+<p class="eyebrow">HANDS-ON PRACTICE</p>
+<h2 id="sql-lab-title">SQL Playground</h2>
+<p>Write and run real SQL against a sample university database. Nothing you do here changes a live system.</p>
+</div>
+<span class="sql-engine-status" data-engine-status=""><span class="status-dot"></span> Loading SQL engine…</span>
+</div>
+<div class="sql-lab-toolbar">
+<label for="sql-challenge">Practice activity</label>
+<select data-challenge-select="" id="sql-challenge">
+<option value="explore">Explore the database</option>
+<option value="select">Coding: select student names</option>
+<option value="filter">Coding: filter by major</option>
+<option value="debug">Debug: fix the query</option>
+<option value="join">Coding: join students and courses</option>
+<option value="aggregate">Exam practice: count students by major</option>
+</select>
+<button class="sql-toolbar-button" data-load-challenge="" type="button">Load activity</button>
+</div>
+<div class="sql-challenge-card" data-challenge-card="">
+<div class="sql-challenge-label">DATABASE EXPLORER</div>
+<h3 data-challenge-title="">Explore the database</h3>
+<p data-challenge-description="">Try SELECT * FROM students; and inspect the available tables. Use the schema panel as a reference.</p>
+<p class="sql-hint" data-challenge-hint="">Tip: every SQL statement should end with a semicolon.</p>
+</div>
+<div class="sql-workbench">
+<section aria-label="SQL query editor" class="sql-editor-panel">
+<div class="sql-panel-heading"><span><span class="panel-number">01</span> Query editor</span><span class="editor-language">SQL</span></div>
+<label class="visually-hidden" for="sql-query">Write your SQL query</label>
+<textarea aria-describedby="sql-editor-help" autocapitalize="off" autocomplete="off" autocorrect="off" data-query-editor="" id="sql-query" spellcheck="false">SELECT *
+FROM students;</textarea>
+<p class="sql-editor-help" id="sql-editor-help">Ctrl/⌘ + Enter to run. Multiple read-only queries are supported.</p>
+<div class="sql-editor-actions">
+<button class="sql-run-button" data-run-query="" disabled="" type="button">Run query <span aria-hidden="true">→</span></button>
+<button class="sql-secondary-button" data-reset-db="" type="button">Reset database</button>
+</div>
+</section>
+<section aria-label="Query results" class="sql-results-panel">
+<div class="sql-panel-heading"><span><span class="panel-number">02</span> Results</span><span class="sql-row-count" data-row-count="">Waiting for query</span></div>
+<div aria-live="polite" class="sql-feedback" data-query-feedback="" role="status">The results of your query will appear here.</div>
+<div class="sql-results-scroll" data-results-wrap="">
+<div class="sql-empty-state"><span aria-hidden="true">⌘</span><strong>Your results will appear here</strong><p>Run a query to see its output.</p></div>
+</div>
+</section>
+</div>
+<div class="sql-lab-bottom">
+<section class="sql-schema-panel">
+<div class="sql-panel-heading"><span><span class="panel-number">03</span> Database schema</span><span class="schema-tag">SAMPLE DATA</span></div>
+<div class="sql-schema-grid">
+<div class="schema-table"><strong>students</strong><code>id · INTEGER</code><code>student_id · INTEGER</code><code>name · TEXT</code><code>major · TEXT</code><code>year_level · INTEGER</code></div>
+<div class="schema-table"><strong>courses</strong><code>course_id · TEXT</code><code>course_name · TEXT</code><code>credits · INTEGER</code></div>
+<div class="schema-table"><strong>enrollments</strong><code>enrollment_id · INTEGER</code><code>student_id · INTEGER</code><code>course_id · TEXT</code><code>grade · TEXT</code></div>
+</div>
+</section>
+<section class="sql-score-panel">
+<div class="sql-panel-heading"><span><span class="panel-number">04</span> Activity progress</span></div>
+<div class="sql-score-number" data-challenge-score="">0 <span>/ 5</span></div>
+<p>Activities completed in this browser</p>
+<div class="sql-progress-track"><span data-progress-bar=""></span></div>
+<button class="sql-check-button" data-check-challenge="" type="button">Check activity</button>
+<p class="sql-score-note" data-check-feedback="">Complete a challenge, then check your answer.</p>
+</section>
+</div>
+<p class="sql-privacy-note"><strong>Learning data:</strong> query execution happens in your browser. This prototype saves activity completion locally; shared accounts and cross-device progress require a backend, which is not connected yet.</p>
+</section>
+<section class="database-lesson-list"><div><p class="eyebrow">COURSE CONTENT</p><h2>Database Lab lessons</h2><p>Each lesson has its own HTML file, with shared styles and navigation.</p></div><div class="database-lesson-grid"><a class="database-lesson-card" href="database-lab/lab00.html"><span class="module-number">01</span><span><strong>Introduction to Databases and SQL</strong><small>Open Lab 00</small></span><span aria-hidden="true">→</span></a><a class="database-lesson-card" href="database-lab/lab01.html"><span class="module-number">02</span><span><strong>SELECT Statements</strong><small>Open Lab 01</small></span><span aria-hidden="true">→</span></a><a class="database-lesson-card" href="database-lab/lab02.html"><span class="module-number">03</span><span><strong>Filtering with WHERE</strong><small>Open Lab 02</small></span><span aria-hidden="true">→</span></a><a class="database-lesson-card" href="database-lab/lab03.html"><span class="module-number">04</span><span><strong>Sorting and Limiting Results</strong><small>Open Lab 03</small></span><span aria-hidden="true">→</span></a><a class="database-lesson-card" href="database-lab/lab04.html"><span class="module-number">05</span><span><strong>Aggregate Functions and GROUP BY</strong><small>Open Lab 04</small></span><span aria-hidden="true">→</span></a><a class="database-lesson-card" href="database-lab/lab05.html"><span class="module-number">06</span><span><strong>Joining Tables</strong><small>Open Lab 05</small></span><span aria-hidden="true">→</span></a></div></section>
+</div>
+</main>
+<footer class="site-footer">
+<div class="container footer-inner">
+<a class="brand footer-brand" href="../index.html">
+<span aria-hidden="true" class="brand-mark">&gt;_</span>
+<span>CodeBench</span>
+</a>
+<p>Built for practice. Improved through feedback.</p>
+<p class="copyright">© <span id="current-year"></span> CodeBench</p>
+</div>
+</footer>
 </body>
 </html>

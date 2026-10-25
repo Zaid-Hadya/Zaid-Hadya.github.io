@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Learn relational databases and SQL through structured lessons, examples, and practical exercises." name="description"/>
+<title>Introduction to Databases with SQL — CodeBench</title>
+<link href="../assets/css/base.css" rel="stylesheet"/>
+<link href="../assets/css/layout.css" rel="stylesheet"/>
+<link href="../assets/css/components.css" rel="stylesheet"/>
+<link href="../assets/css/course.css" rel="stylesheet"/>
+<script src="../assets/js/main.js" type="module"></script>
+<script src="../assets/js/course-page.js" type="module"></script>
+<script src="../assets/js/sql-playground.js" type="module"></script>
+<link href="../assets/css/database-lab.css" rel="stylesheet"/><script src="../assets/js/auth-ui.js" type="module"></script><script src="../assets/js/lesson-progress.js" type="module"></script></head>
+<body>
+<header class="site-header">
+<div class="container header-inner">
+<a aria-label="CodeBench home" class="brand" href="../index.html">
+<img alt="" class="brand-logo" height="40" src="../assets/images/wolf-logo.png" width="40"/>
+<span>CodeBench</span>
+</a>
+<button aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation" class="menu-toggle" type="button">
+<span></span>
+<span></span>
+</button>
+<nav aria-label="Main navigation" class="main-nav" id="main-navigation">
+<a href="../index.html#courses">Courses</a>
+<a aria-label="Roadmaps, coming soon" class="nav-upcoming" href="#roadmaps">
+        Roadmaps <span>Coming soon</span>
+</a>
+<a class="nav-sign-in" data-auth-link="true" href="../auth.html">Sign in</a>
+</nav>
+</div>
+</header>
+<main class="course-page">
+<div class="container">
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+<a href="../index.html">Home</a>
+<span aria-hidden="true" class="breadcrumb-separator">/</span>
+<a href="../index.html#courses">Courses</a>
+<span aria-hidden="true" class="breadcrumb-separator">/</span>
+<span aria-current="page">Introduction to Databases with SQL</span>
+</nav>
+<section class="course-heading">
+<div>
+<p class="eyebrow">DATABASES / BEGINNER</p>
+<h1>Introduction to Databases with SQL</h1>
+<p class="course-hero-description">
+            Learn how relational databases organize information and how to
+            retrieve, filter, sort, summarize, and combine data.
+          </p>
+</div>
+<div aria-label="Course details" class="course-meta">
+<span>06 modules</span>
+<span>Self-paced</span>
+<span>Examples included</span>
+</div>
+</section>
+<section aria-labelledby="sql-lab-title" class="sql-lab" data-sql-playground="">
+<div class="sql-lab-heading">
+<div>
+<p class="eyebrow">HANDS-ON PRACTICE</p>
+<h2 id="sql-lab-title">SQL Playground</h2>
+<p>Write and run real SQL against a sample university database. Nothing you do here changes a live system.</p>
+</div>
+<span class="sql-engine-status" data-engine-status=""><span class="status-dot"></span> Loading SQL engine…</span>
+</div>
+<div class="sql-lab-toolbar">
+<label for="sql-challenge">Practice activity</label>
+<select data-challenge-select="" id="sql-challenge">
+<option value="explore">Explore the database</option>
+<option value="select">Coding: select student names</option>
+<option value="filter">Coding: filter by major</option>
+<option value="debug">Debug: fix the query</option>
+<option value="join">Coding: join students and courses</option>
+<option value="aggregate">Exam practice: count students by major</option>
+</select>
+<button class="sql-toolbar-button" data-load-challenge="" type="button">Load activity</button>
+</div>
+<div class="sql-challenge-card" data-challenge-card="">
+<div class="sql-challenge-label">DATABASE EXPLORER</div>
+<h3 data-challenge-title="">Explore the database</h3>
+<p data-challenge-description="">Try SELECT * FROM students; and inspect the available tables. Use the schema panel as a reference.</p>
+<p class="sql-hint" data-challenge-hint="">Tip: every SQL statement should end with a semicolon.</p>
+</div>
+<div class="sql-workbench">
+<section aria-label="SQL query editor" class="sql-editor-panel">
+<div class="sql-panel-heading"><span><span class="panel-number">01</span> Query editor</span><span class="editor-language">SQL</span></div>
+<label class="visually-hidden" for="sql-query">Write your SQL query</label>
+<textarea aria-describedby="sql-editor-help" autocapitalize="off" autocomplete="off" autocorrect="off" data-query-editor="" id="sql-query" spellcheck="false">SELECT *
+FROM students;</textarea>
+<p class="sql-editor-help" id="sql-editor-help">Ctrl/⌘ + Enter to run. Multiple read-only queries are supported.</p>
+<div class="sql-editor-actions">
+<button class="sql-run-button" data-run-query="" disabled="" type="button">Run query <span aria-hidden="true">→</span></button>
+<button class="sql-secondary-button" data-reset-db="" type="button">Reset database</button>
+</div>
+</section>
+<section aria-label="Query results" class="sql-results-panel">
+<div class="sql-panel-heading"><span><span class="panel-number">02</span> Results</span><span class="sql-row-count" data-row-count="">Waiting for query</span></div>
+<div aria-live="polite" class="sql-feedback" data-query-feedback="" role="status">The results of your query will appear here.</div>
+<div class="sql-results-scroll" data-results-wrap="">
+<div class="sql-empty-state"><span aria-hidden="true">⌘</span><strong>Your results will appear here</strong><p>Run a query to see its output.</p></div>
+</div>
+</section>
+</div>
+<div class="sql-lab-bottom">
+<section class="sql-schema-panel">
+<div class="sql-panel-heading"><span><span class="panel-number">03</span> Database schema</span><span class="schema-tag">SAMPLE DATA</span></div>
+<div class="sql-schema-grid">
+<div class="schema-table"><strong>students</strong><code>id · INTEGER</code><code>student_id · INTEGER</code><code>name · TEXT</code><code>major · TEXT</code><code>year_level · INTEGER</code></div>
+<div class="schema-table"><strong>courses</strong><code>course_id · TEXT</code><code>course_name · TEXT</code><code>credits · INTEGER</code></div>
+<div class="schema-table"><strong>enrollments</strong><code>enrollment_id · INTEGER</code><code>student_id · INTEGER</code><code>course_id · TEXT</code><code>grade · TEXT</code></div>
+</div>
+</section>
+<section class="sql-score-panel">
+<div class="sql-panel-heading"><span><span class="panel-number">04</span> Activity progress</span></div>
+<div class="sql-score-number" data-challenge-score="">0 <span>/ 5</span></div>
+<p>Activities completed in this browser</p>
+<div class="sql-progress-track"><span data-progress-bar=""></span></div>
+<button class="sql-check-button" data-check-challenge="" type="button">Check activity</button>
+<p class="sql-score-note" data-check-feedback="">Complete a challenge, then check your answer.</p>
+</section>
+</div>
+<p class="sql-privacy-note"><strong>Learning data:</strong> query execution happens in your browser. This prototype saves activity completion locally; shared accounts and cross-device progress require a backend, which is not connected yet.</p>
+</section>
+<section class="database-lesson-list"><div><p class="eyebrow">COURSE CONTENT</p><h2>Database Lab lessons</h2><p>Each lesson has its own HTML file, with shared styles and navigation.</p></div><div class="database-lesson-grid"><a class="database-lesson-card" href="database-lab/lab00.html"><span class="module-number">01</span><span><strong>Introduction to Databases and SQL</strong><small>Open Lab 00</small></span><span aria-hidden="true">→</span></a><a class="database-lesson-card" href="database-lab/lab01.html"><span class="module-number">02</span><span><strong>SELECT Statements</strong><small>Open Lab 01</small></span><span aria-hidden="true">→</span></a><a class="database-lesson-card" href="database-lab/lab02.html"><span class="module-number">03</span><span><strong>Filtering with WHERE</strong><small>Open Lab 02</small></span><span aria-hidden="true">→</span></a><a class="database-lesson-card" href="database-lab/lab03.html"><span class="module-number">04</span><span><strong>Sorting and Limiting Results</strong><small>Open Lab 03</small></span><span aria-hidden="true">→</span></a><a class="database-lesson-card" href="database-lab/lab04.html"><span class="module-number">05</span><span><strong>Aggregate Functions and GROUP BY</strong><small>Open Lab 04</small></span><span aria-hidden="true">→</span></a><a class="database-lesson-card" href="database-lab/lab05.html"><span class="module-number">06</span><span><strong>Joining Tables</strong><small>Open Lab 05</small></span><span aria-hidden="true">→</span></a></div></section>
+</div>
+</main>
+<footer class="site-footer">
+<div class="container footer-inner">
+<a class="brand footer-brand" href="../index.html">
+<span aria-hidden="true" class="brand-mark">&gt;_</span>
+<span>CodeBench</span>
+</a>
+<p>Built for practice. Improved through feedback.</p>
+<p class="copyright">© <span id="current-year"></span> CodeBench</p>
+</div>
+</footer>
+</body>
+</html>

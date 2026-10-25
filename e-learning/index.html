@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Practical programming learning for university students and aspiring engineers." name="description"/>
+<title>CodeBench — A Better Way to Prepare</title>
+<link href="assets/css/base.css" rel="stylesheet"/>
+<link href="assets/css/layout.css" rel="stylesheet"/>
+<link href="assets/css/components.css" rel="stylesheet"/>
+<link href="assets/css/home.css" rel="stylesheet"/>
+<script src="assets/js/main.js" type="module"></script>
+<script src="assets/js/auth-ui.js" type="module"></script></head>
+<body>
+<header class="site-header">
+<div class="container header-inner">
+<a aria-label="CodeBench home" class="brand" href="index.html">
+<img alt="" class="brand-logo" height="40" src="assets/images/wolf-logo.png" width="40"/>
+<span>CodeBench</span>
+</a>
+<button aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation" class="menu-toggle" type="button">
+<span></span>
+<span></span>
+</button>
+<nav aria-label="Main navigation" class="main-nav" id="main-navigation">
+<a href="index.html#courses">Courses</a>
+<a aria-label="Roadmaps, coming soon" class="nav-upcoming" href="#roadmaps">
+        Roadmaps <span>Coming soon</span>
+</a>
+<a class="nav-sign-in" data-auth-link="true" href="auth.html">Sign in</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="hero-section container">
+<div class="hero-copy">
+<p class="eyebrow">YOUR NEXT STEP STARTS HERE</p>
+<h1>
+          A better way to
+          <span class="hero-emphasis">prepare.</span>
+</h1>
+<p class="hero-description">
+          Build your foundations, sharpen your problem-solving skills,
+          and feel more confident in your journey to becoming an engineer.
+        </p>
+<p class="hero-audience">
+          Built for university students and aspiring engineers around the world.
+        </p>
+<a class="button button-primary" href="#subjects">
+          Find your subject <span aria-hidden="true">↓</span>
+</a>
+</div>
+<div aria-hidden="true" class="hero-aside">
+<div class="hero-aside-top">
+<span class="hero-dot"></span>
+<span>LEARNING IN PROGRESS</span>
+</div>
+<div class="hero-code-line">
+<span class="code-number">01</span>
+<span class="code-keyword">learn</span><span>(</span><span class="code-string">"the basics"</span><span>);</span>
+</div>
+<div class="hero-code-line">
+<span class="code-number">02</span>
+<span class="code-keyword">practice</span><span>();</span>
+</div>
+<div class="hero-code-line">
+<span class="code-number">03</span>
+<span class="code-keyword">build</span><span>(</span><span class="code-string">something real</span><span>);</span>
+</div>
+<div class="hero-aside-bottom">
+<span>CONCEPTS</span>
+<span>→</span>
+<span>CONFIDENCE</span>
+</div>
+</div>
+</section>
+<section class="subjects-section container" id="subjects">
+<div class="subjects-heading">
+<div>
+<p class="eyebrow">EXPLORE THE CATALOGUE</p>
+<h2>What do you want to learn?</h2>
+</div>
+<p class="subjects-intro">
+          Start with the fundamentals or go deeper into the concepts
+          that power modern software.
+        </p>
+</div>
+<div class="subject-grid">
+<article class="subject-card subject-available">
+<a aria-label="Explore Introduction to Databases with SQL" class="subject-cover-link" href="courses/sql.html">
+<img alt="Illustration of connected database tables" class="subject-cover" height="360" src="assets/images/sql-cover.svg" width="640"/>
+</a>
+<div class="subject-card-body">
+<div class="subject-meta">
+<span class="subject-category">DATABASES</span>
+<span class="status status-available">Available</span>
+</div>
+<h3>
+<a href="courses/sql.html">Introduction to Databases with SQL</a>
+</h3>
+<p>
+              Query data, filter results, and understand how relational
+              databases fit together.
+            </p>
+<div class="subject-card-footer">
+<span>6 modules</span>
+<a class="subject-link" href="courses/sql.html">
+                Explore course <span aria-hidden="true">→</span>
+</a>
+</div>
+</div>
+</article>
+<article class="subject-card subject-upcoming">
+<div class="subject-cover-wrap">
+<img alt="Illustration of Java programming concepts and code" class="subject-cover" height="360" src="assets/images/java-cover.svg" width="640"/>
+<span class="cover-status">Coming soon</span>
+</div>
+<div class="subject-card-body">
+<div class="subject-meta">
+<span class="subject-category">JAVA</span>
+</div>
+<h3>Introduction to Programming</h3>
+<p>
+              Learn variables, conditions, loops, methods, and how to
+              turn a problem into a working program.
+            </p>
+<div class="subject-card-footer">
+<span>Beginner level</span>
+<span class="upcoming-label">In preparation</span>
+</div>
+</div>
+</article>
+<article class="subject-card subject-upcoming">
+<div class="subject-cover-wrap">
+<img alt="Illustration of objects connected to classes" class="subject-cover" height="360" src="assets/images/oop-cover.svg" width="640"/>
+<span class="cover-status">Coming soon</span>
+</div>
+<div class="subject-card-body">
+<div class="subject-meta">
+<span class="subject-category">JAVA · OOP</span>
+</div>
+<h3>Object-Oriented Programming</h3>
+<p>
+              Explore classes, objects, inheritance, encapsulation,
+              and polymorphism through practical examples.
+            </p>
+<div class="subject-card-footer">
+<span>Build on Java basics</span>
+<span class="upcoming-label">In preparation</span>
+</div>
+</div>
+</article>
+<article class="subject-card subject-upcoming">
+<div class="subject-cover-wrap">
+<img alt="Illustration of linked nodes and data structures" class="subject-cover" height="360" src="assets/images/dsa-cover.svg" width="640"/>
+<span class="cover-status">Coming soon</span>
+</div>
+<div class="subject-card-body">
+<div class="subject-meta">
+<span class="subject-category">COMPUTER SCIENCE</span>
+</div>
+<h3>Data Structures and Algorithms</h3>
+<p>
+              Understand how data is organized and how algorithms
+              solve problems efficiently.
+            </p>
+<div class="subject-card-footer">
+<span>Concepts and problem solving</span>
+<span class="upcoming-label">In preparation</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section class="about-section container" id="about">
+<div>
+<p class="eyebrow">THE IDEA BEHIND CODEBENCH</p>
+</div>
+<div class="about-content">
+<h2>Less memorising. More understanding.</h2>
+<p>
+          Good programming skills come from practice. The aim is to help
+          you understand the concepts, experiment with code, learn from
+          mistakes, and solve problems independently.
+        </p>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-inner">
+<a class="brand footer-brand" href="index.html">
+<span aria-hidden="true" class="brand-mark">&gt;_</span>
+<span>CodeBench</span>
+</a>
+<p>Built for practice. Improved through feedback.</p>
+<p class="copyright">© <span id="current-year"></span> CodeBench</p>
+</div>
+</footer>
+</body>
+</html>
